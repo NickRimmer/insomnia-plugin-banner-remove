@@ -1,0 +1,65 @@
+{
+    "name": "insomnia-plugin-banner-remove",
+    "version": "1.0.0",
+    "private": true,
+    "insomnia": {
+        "name": "banner-remove",
+        "displayName": "Scratch Pad - Banner remove",
+        "description": "Please consider using it only if the banner is truly bothersome to you.",
+        "unlisted": false,
+        "images": {
+            "icon": "icon-sm.jpg"
+        },
+        "publisher": {
+            "name": "Nick Rimmer",
+            "icon": "https://www.gravatar.com/avatar/53a530a44db8d365a66bcdef9d49e23c"
+        }
+    },
+    "main": "dist/index.js",
+    "author": "Nick Rimmer <NickRimmer@debugging.ninja>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/NickRimmer/insomnia-plugin-banner-remove.git",
+        "directory": ""
+    },
+    "bugs": {
+        "url": "https://github.com/NickRimmer/insomnia-plugin-banner-remove/issues"
+    },
+    "scripts": {
+        "build-npm": "node npm/generate-package.js && copyfiles -u 2 ./npm/content/* ./dist/",
+        "build": "esr esbuild.ts && npm run build-npm",
+        "watch-trigger": "esr esbuild.ts && npm run install",
+        "watch": "npm run build-npm && npm-watch watch-trigger",
+        "clean": "rimraf dist",
+        "publish": "npm run build && cd dist && npm publish",
+        "publish-dry": "npm run build && cd dist && npm publish --dry-run",
+        "install": "copyfiles -u 1 ./dist/* %appdata%/insomnia/plugins/insomnia-plugin-banner-remove",
+        "lint": "eslint --ext .ts,.tsx .",
+        "lint-fix": "eslint --ext .ts,.tsx --fix ."
+    },
+    "watch": {
+        "watch-trigger": {
+            "patterns": [
+                "src"
+            ],
+            "extensions": "ts"
+        }
+    },
+    "devDependencies": {
+        "@types/node": "^20.3.3",
+        "@typescript-eslint/eslint-plugin": "^5.60.1",
+        "@typescript-eslint/parser": "^5.60.1",
+        "typescript": "^5.2.2",
+        "copyfiles": "^2.4.1",
+        "esbuild": "^0.18.11",
+        "esbuild-runner": "^2.2.2",
+        "eslint": "^8.44.0",
+        "eslint-plugin-react": "^7.32.2",
+        "npm-watch": "^0.11.0",
+        "request": "^2.88.0",
+        "rimraf": "^5.0.1",
+        "sass": "^1.63.6",
+        "semver": "^7.3.8"
+    }
+}
