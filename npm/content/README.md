@@ -4,7 +4,7 @@
 
 A simple plugin is available to remove the Scratch Pad banner at the top. Please consider using it only if the banner is truly bothersome to you.  
 
-![No banner anymore](icon-lg.jpg)
+![npm/content/No banner anymore](icon-lg.jpg)
 
 # How to contribute
 
