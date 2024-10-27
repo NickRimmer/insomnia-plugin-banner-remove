@@ -1,4 +1,8 @@
-﻿If you like this plugin, [leave it a :star: on Github!](https://github.com/NickRimmer/insomnia-plugin-banner-remove)
+﻿# Plugin depricated
+Hey! Just a heads-up that I'm archiving this repo. I've started working on my own client, where I'll be applying all the ideas I wanted to bring here 😊
+It's called [RestApia](https://www.restapia.app/). Feel free to check it out!
+ 
+ If you like this plugin, [leave it a :star: on Github!](https://github.com/NickRimmer/insomnia-plugin-banner-remove)
 
 # About
 
